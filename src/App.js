@@ -8,6 +8,8 @@ import {
    Outlet,
 } from 'react-router-dom';
 
+// https://www.robinwieruch.de/react-router-private-routes/
+
 function App() {
    const [user, setUser] = useState(null);
 
