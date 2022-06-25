@@ -183,8 +183,8 @@ const ProtectedRoute = ({ isAllowed, redirectPath = '/landing', children }) => {
       return <Navigate to={redirectPath} />;
    }
 
-   // If children are present in the "element" of a Route component, render these
-   // Otherwise, render children of a route element
+   // If children are present in the "element" prop of a Route component, render these
+   // Otherwise, render children of the route element
    return children ? children : <Outlet />;
 };
 
