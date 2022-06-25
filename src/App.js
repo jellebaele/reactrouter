@@ -36,6 +36,7 @@ function App() {
             <Routes>
                <Route index element={<Landing />} />
                <Route path="landing" element={<Landing />} />
+               {/* Define routes specifically allowed for this condition in the 'elements' prop */}
                {/* <Route
                   path="home"
                   element={
@@ -44,6 +45,9 @@ function App() {
                      </LoggedInRoute>
                   }
                ></Route> */}
+
+               {/* Another approach is defining  routes specifically allowed for this condition as children of the Route component.
+                    These children are returned by the 'Outlet' component. */}
                <Route element={<LoggedInRoute user={user} />}>
                   <Route path="home" element={<Home />} />
                   <Route path="dashboard" element={<Dashboard />} />
